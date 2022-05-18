@@ -1,31 +1,61 @@
 import React from 'react'
+
+// Get the right things for the headings and all
 import Typography from '@material-ui/core/Typography'
+// or could say:
+// import { Typography } from '@material-ui/core' --> slightly less 
+// Default typography tage <Typography></Typography> is a paragraph tag.
+
 
 export default function Create() {
   return (
     <div>
       <Typography
-        variant="h6" 
-        color="textSecondary"
+        // look like h6, but outputs h2
+        variant="h6"
+        color="textSecondary" // Different to "secondary"
         component="h2"
+        // Inspecting element, you see orange little margin below text
         gutterBottom
       >
         Create a New Note
       </Typography>
-
-      {/* <Typography
-        variant="h1" 
-        color="primary"
-        align="center"
-      >
-        Create a New Note
-      </Typography>
-      <Typography
-        noWrap
-        color="secondary"
-      >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque molestiae magnam voluptate reiciendis fuga totam facere officia, animi sint laboriosam dolorum voluptas cupiditate explicabo dolore veritatis recusandae rem inventore sunt.
-      </Typography> */}
     </div>
   )
 }
+
+/*
+export default function Create() {
+  return (
+    <div>
+      <Typography 
+
+        // below things are what we call "props" --> variant thing, colour thing, etc.
+
+        variant="h1"
+        // gotta use theme colours, could be "secondary"
+        color="primary"
+        align="center"
+      >
+        Create a new Note
+      </Typography>
+    </div>
+  )
+}
+*/
+
+/*
+export default function Create() {
+  return (
+    <div>
+      <Typography 
+        colour="primary"
+        noWrap
+        // https://mui.com/material-ui/api/typography/ 
+      >
+        Lorum ipsum efowifnwioejfiowejfiowjfiowjofwejioefwjiowefj wfejiewojfiwjfiwejfiowejfiowejfiwjefo  wifjiowejfiwejfiwe jwfeoijfe
+      </Typography>
+    </div>
+  )
+}
+*/
